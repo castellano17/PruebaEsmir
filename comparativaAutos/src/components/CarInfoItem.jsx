@@ -12,13 +12,13 @@ const CarInfoItem = ({
     } p-3`}
   >
     <h1
-      className={`font-bold text-5xl ${
+      className={`font-bold sm:text-4xl md:text-5xl ${
         text === "black" ? "text-black" : "text-white"
       } `}
     >
       {value}
       <span
-        className={`font-medium opacity-8 text-2xl ml-2  ${
+        className={`font-medium opacity-8 sm:text-xl md:text-2xl ml-2  ${
           opacity === "60" ? "opacity-60" : ""
         } `}
       >
@@ -28,7 +28,7 @@ const CarInfoItem = ({
     <p
       className={`${
         text === "black" ? "text-black" : "text-white"
-      } text-xs font-semibold `}
+      } text-xs md:text-xs font-semibold `}
     >
       {label}
     </p>
