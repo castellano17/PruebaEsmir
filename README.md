@@ -20,4 +20,4 @@ npm run dev
 ## Proyecto 2
 
 1. Navega a la carpeta `Lógica`.
-2. Ejecuta en el navegador el archivo index.html
+2. Ejecuta en el navegador el archivo results.html
