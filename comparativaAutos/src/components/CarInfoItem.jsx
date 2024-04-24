@@ -6,17 +6,33 @@ const CarInfoItem = ({
   text = "white",
   opacity = "opacity-0",
 }) => (
-  <div className={`mb-50 border-r-2 ${border ? `border-${border}` : ""} p-3`}>
-    <div className={`font-bold text-5xl text-${text} `}>
+  <section
+    className={`mb-50 border-r-2 ${
+      border === "black" ? "border-black" : "border-white"
+    } p-3`}
+  >
+    <h1
+      className={`font-bold text-5xl ${
+        text === "black" ? "text-black" : "text-white"
+      } `}
+    >
       {value}
       <span
-        className={`font-medium opacity-8 text-2xl ml-2 text-${text} opacity-${opacity} `}
+        className={`font-medium opacity-8 text-2xl ml-2  ${
+          opacity === "60" ? "opacity-60" : ""
+        } `}
       >
         {unit}
       </span>
-    </div>
-    <div className={`text-${text} text-xs font-semibold `}>{label}</div>
-  </div>
+    </h1>
+    <p
+      className={`${
+        text === "black" ? "text-black" : "text-white"
+      } text-xs font-semibold `}
+    >
+      {label}
+    </p>
+  </section>
 );
 
 export default CarInfoItem;

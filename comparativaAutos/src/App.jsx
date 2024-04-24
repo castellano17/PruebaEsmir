@@ -1,4 +1,3 @@
-import "./App.css";
 import ImageComparison from "./components/ImageComparison";
 
 function App() {
