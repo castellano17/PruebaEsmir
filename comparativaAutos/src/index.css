@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.top-custom {
+  top: 70%;
+}
+
+.panel {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.panel .content {
+  position: absolute;
+  width: 100vw;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.handle {
+  height: 100%;
+  position: absolute;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  width: 5px;
+  top: 0;
+  left: 50%;
+  z-index: 3;
+}
+
+.handle::before,
+.handle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.handle::before {
+  transform: translate(-50%, -50%) rotate(-90deg);
+  left: -8px;
+}
+
+.handle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  right: -18px;
+}
+
+.skewed .handle {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200%;
+  transform-origin: top;
+}
+.skewed .moved {
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+.skewed .moved .content {
+  margin-left: 1000px;
+}
